@@ -12,7 +12,7 @@ php .\bin\console d:d:c
 
 ### Lancer les migrations :
 
-php .\bin\console d:m:m -n
+php .\bin\console d:make:m -n
 
 ### Appliquer les fixtures :
 
