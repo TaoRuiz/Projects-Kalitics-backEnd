@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		{% include "/partials/baseStylesheets.html.twig" %}
+		{% block stylesheets %}{% endblock %}
+	</head>
+	<body>
+		<header>
+			{% include "/partials/baseNavbar.html.twig" %}
+		</header>
+		<main class="container py-5"> {% block body %}{% endblock %}
+			</main>
+
+			{% include "/partials/baseJs.html.twig" %}
+			{% block javascripts %}{% endblock %}
+
+		</body>
+	</html>
